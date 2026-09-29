@@ -23,7 +23,8 @@ public class Frame {
               this.price = price;
               this.stockQty = 0;    //real quantity come through stock service
        }
-    
+
+       //doesn't actual change the stock values here. it's implementeed here only for the code to  run as a saftey prcaution
        public void updateStock(int delta) {                 //delta is the change. ex:- sale is -1, new stock is +10
               if (stockQty + delta < 0) {
                   throw new IllegalArgument ("Stock cannot be negative value...");
